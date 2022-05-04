@@ -1,4 +1,7 @@
 :root {
+    /* Animations */
+    --transition-time-quick: .15s;
+
     /* Main */
     --max-width: 3840px;
 

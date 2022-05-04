@@ -94,14 +94,13 @@ nav a p {
     border: 2px solid var(--border-color);
     border-radius: calc(var(--header-height) / 2 * var(--header-links-size-factor));
 
-    transition: all 0.25s ease-in-out;
-    transition-property: border-radius, box-shadow;
+    transition: all var(--transition-time-quick) ease-in-out;
+    transition-property: background-color, border-radius, box-shadow;
 }
 
 nav a:hover p {
     background-color: var(--acrylic-gray-2);
     border-radius: calc(var(--header-height) / 2 * var(--header-links-size-factor) * 0.7);
-    
     box-shadow: 0 0 10px var(--shadow-medium);
 }
 
@@ -126,7 +125,7 @@ button#menu span {
     border-radius: calc(var(--header-height) / 2 * var(--header-links-size-factor));
     background-color: transparent;
 
-    transition: background-color 0.25s ease-in-out;
+    transition: background-color var(--transition-time-quick) ease-in-out;
 }
 
 button#menu:hover span {
@@ -290,14 +289,13 @@ aside#page-navigation button span {
     aspect-ratio: 1/1;
     padding-top: 4px;
 
-    transition: all 0.25s ease-in-out;
-    transition-property: border-radius, box-shadow;
+    transition: all var(--transition-time-quick) ease-in-out;
+    transition-property: background-color, border-radius, box-shadow;
 }
 
 aside#page-navigation button:hover span {
     background-color: var(--acrylic-gray-2);
     border-radius: 35%;
-
     box-shadow: 0 0 10px var(--shadow-medium);
 }
 
