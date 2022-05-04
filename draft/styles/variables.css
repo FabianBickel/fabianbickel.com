@@ -1,0 +1,68 @@
+:root {
+    /* Main */
+    --max-width: 1920px;
+
+    /* Header */
+    --header-height: 70px;
+    --header-links-size-factor: 0.5;
+
+    /* Content */
+    --content-padding: 5%;
+
+    /* Footer */
+    --footer-height: 25px;
+
+    /* Aside */
+    --aside-width: 60px;
+    --aside-button-scale: 0.75;
+}
+
+/* Colors */
+
+@media (prefers-color-scheme: light) {
+    :root {
+        /* Colors */
+        --void: #FFFFFF;
+        --background: #FFFFFF;
+        --gray-1: #EFEFEF;
+        --gray-2: #DFDFDF;
+        --gray-3: #CFCFCF;
+
+        --font-color: #000000;
+        --font-color-inverted: #FFFFFF;
+
+        --shadow-color-light-only: rgba(0, 0, 0, 0.25);
+        --shadow-color: rgba(0, 0, 0, 0.25);
+        --border-color: #transparent;
+
+        /* Acrylic */
+        --acrylic-background: rgba(255, 255, 255, 0.9);
+        --acrylic-gray-1: rgba(255, 255, 255, 0.2);
+        --acrylic-gray-2: rgba(255, 255, 255, 0.4);
+        --acrylic-gray-3: rgba(255, 255, 255, 0.6);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Colors */
+        --void: #1F1F1F;
+        --background: #2F2F2F;
+        --gray-1: #3F3F3F;
+        --gray-2: #4F4F4F;
+        --gray-3: #5F5F5F;
+
+        --font-color: #DDDDDD;
+        --font-color-inverted: #000000;
+
+        --shadow-color-light-only: transparent;
+        --shadow-color: rgba(0, 0, 0, 0.25);
+        --border-color: #6F6F6F;
+
+        /* Acrylic */
+        --acrylic-background: rgba(47, 47, 47, 0.6);
+        --acrylic-gray-1: rgba(0, 0, 0, 0.2);
+        --acrylic-gray-2: rgba(0, 0, 0, 0.4);
+        --acrylic-gray-3: rgba(0, 0, 0, 0.6);
+    }
+}
