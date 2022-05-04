@@ -1,6 +1,6 @@
 :root {
     /* Main */
-    --max-width: 1920px;
+    --max-width: 3840px;
 
     /* Header */
     --header-height: 70px;
@@ -31,8 +31,10 @@
         --font-color: #000000;
         --font-color-inverted: #FFFFFF;
 
-        --shadow-color-light-only: rgba(0, 0, 0, 0.25);
-        --shadow-color: rgba(0, 0, 0, 0.25);
+        --shadow-light-only: rgba(0, 0, 0, 0.25);
+        --shadow-light: rgba(0, 0, 0, 0.25);
+        --shadow-medium: rgba(0, 0, 0, 0.5);
+        --shadow-heavy: rgba(0, 0, 0, 0.75);
         --border-color: #transparent;
 
         /* Acrylic */
@@ -56,7 +58,9 @@
         --font-color-inverted: #000000;
 
         --shadow-color-light-only: transparent;
-        --shadow-color: rgba(0, 0, 0, 0.25);
+        --shadow-light: rgba(0, 0, 0, 0.25);
+        --shadow-medium: rgba(0, 0, 0, 0.5);
+        --shadow-heavy: rgba(0, 0, 0, 0.75);
         --border-color: #6F6F6F;
 
         /* Acrylic */

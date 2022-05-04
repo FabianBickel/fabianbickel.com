@@ -18,15 +18,15 @@ main {
     grid-template-columns: auto var(--aside-width);
 
     height: 100%;
-    max-width: 1920px;
+    max-width: var(--max-width);
     margin: 0 auto;
     
     background-color: var(--background);
-    box-shadow: 0 0 40px var(--shadow-color);
+    box-shadow: 0 0 40px var(--shadow-medium);
 }
 
 header, section#content article {
-    padding: 0 var(--aside-width);
+    padding: 0 calc(var(--aside-width) + 1em);
 }
 
 header {
@@ -45,7 +45,7 @@ header {
     top: 0;
     
     z-index: 1;
-    box-shadow: 0 0 20px var(--shadow-color);
+    box-shadow: 0 0 20px var(--shadow-light);
     clip-path: inset(0 0 -20px 0);
 
     border-bottom: 2px solid var(--border-color);
@@ -90,16 +90,19 @@ nav a p {
     margin: 0 calc(var(--header-height) * var(--header-links-size-factor) / 4);
     
     background-color: var(--acrylic-gray-1);
-    box-shadow: 0 0 10px var(--shadow-color);
+    box-shadow: 0 0 10px var(--shadow-light-only);
     border: 2px solid var(--border-color);
     border-radius: calc(var(--header-height) / 2 * var(--header-links-size-factor));
 
-    transition: border-radius 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    transition-property: border-radius, box-shadow;
 }
 
 nav a:hover p {
     background-color: var(--acrylic-gray-2);
     border-radius: calc(var(--header-height) / 2 * var(--header-links-size-factor) * 0.7);
+    
+    box-shadow: 0 0 10px var(--shadow-medium);
 }
 
 button#menu {
@@ -114,8 +117,20 @@ button#menu {
 
 button#menu span {
     font-size: calc(var(--header-height) / 2);
+    text-align: center;
+
+    width: calc(var(--aside-width) * var(--aside-button-scale));
+    aspect-ratio: 1/1;
+    padding-top: 5px;
 
     border-radius: calc(var(--header-height) / 2 * var(--header-links-size-factor));
+    background-color: transparent;
+
+    transition: background-color 0.25s ease-in-out;
+}
+
+button#menu:hover span {
+    background-color: var(--acrylic-gray-2);
 }
 
 section#content {
@@ -124,7 +139,7 @@ section#content {
 }
 
 section#content article {
-
+    text-align: center;
 }
 
 section#content article > h1 {
@@ -151,7 +166,7 @@ article#hero > h1 {
     padding-top: 10%;
 
     font-family: 'Mr Dafoe', cursive;
-    font-size: min(calc(1920px * 0.15), 15vw);
+    font-size: min(calc(var(--max-width) * 0.15), 15vw);
     text-align: center;
 
     background-image: url(../images/backgrounds/stacked-dark-blue.svg);
@@ -159,6 +174,7 @@ article#hero > h1 {
 
 article#article1 {
     background-image: url(../images/backgrounds/blob-pink-dark.svg);
+    padding: 0 100px;
 }
 
 article#article2 {
@@ -234,7 +250,7 @@ aside#page-navigation {
     border-top: 0;
     border-bottom-left-radius: calc(var(--aside-width) / 2);
 
-    box-shadow: 0 0 20px var(--shadow-color);
+    box-shadow: 0 0 20px var(--shadow-light);
     clip-path: inset(0 0 -20px -20px);
 }
 
@@ -260,16 +276,11 @@ aside#page-navigation button:last-of-type {
     border-bottom-left-radius: calc(var(--aside-width) / 2);
 }
 
-aside#page-navigation button:hover span {
-    background-color: var(--acrylic-gray-2);
-    border-radius: 35%;
-}
-
 aside#page-navigation button span {
     background-color: var(--acrylic-gray-1);
     border: 2px solid var(--border-color);
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--shadow-color);
+    box-shadow: 0 0 10px var(--shadow-light-only);
 
     color: var(--font-color);
     font-size: calc(var(--aside-width) * var(--aside-button-scale) * 0.75);
@@ -279,7 +290,15 @@ aside#page-navigation button span {
     aspect-ratio: 1/1;
     padding-top: 4px;
 
-    transition: border-radius 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    transition-property: border-radius, box-shadow;
+}
+
+aside#page-navigation button:hover span {
+    background-color: var(--acrylic-gray-2);
+    border-radius: 35%;
+
+    box-shadow: 0 0 10px var(--shadow-medium);
 }
 
 @media (prefers-color-scheme: dark) {
