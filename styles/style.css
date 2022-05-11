@@ -25,7 +25,7 @@ main {
     box-shadow: 0 0 40px var(--shadow-medium);
 }
 
-header, section#content article {
+header, div#content article {
     padding: 0 calc(var(--aside-width) + 1em);
 }
 
@@ -89,7 +89,7 @@ nav a p {
     padding: 0 calc(var(--header-links-size-factor) * 30px);
     margin: 0 calc(var(--header-height) * var(--header-links-size-factor) / 4);
     
-    background-color: var(--acrylic-gray-1);
+    background-color: var(--acrylic-dark-1);
     box-shadow: 0 0 10px var(--shadow-light-only);
     border: 2px solid var(--border-color);
     border-radius: calc(var(--header-height) / 2 * var(--header-links-size-factor));
@@ -99,7 +99,7 @@ nav a p {
 }
 
 nav a:hover p {
-    background-color: var(--acrylic-gray-2);
+    background-color: var(--acrylic-dark-2);
     border-radius: calc(var(--header-height) / 2 * var(--header-links-size-factor) * 0.7);
     box-shadow: 0 0 10px var(--shadow-medium);
 }
@@ -122,30 +122,32 @@ button#menu span {
     aspect-ratio: 1/1;
     padding-top: 5px;
 
-    border-radius: calc(var(--header-height) / 2 * var(--header-links-size-factor));
+    border-radius: calc(var(--header-height) * var(--header-links-size-factor));
     background-color: transparent;
 
-    transition: background-color var(--transition-time-quick) ease-in-out;
+    transition: all var(--transition-time-quick) ease-in-out;
+    transition-property: background-color, border-radius;
 }
 
 button#menu:hover span {
-    background-color: var(--acrylic-gray-2);
+    background-color: var(--acrylic-dark-2);
+    border-radius: calc(var(--header-height) / 2 * var(--header-links-size-factor));
 }
 
-section#content {
+div#content {
     grid-row: 2/3;
     grid-column: 1/3;
 }
 
-section#content article {
+div#content article {
     text-align: center;
 }
 
-section#content article > h1 {
+div#content article > h1 {
 
 }
 
-section#content article > p {
+div#content article > p {
 
 }
 
@@ -159,7 +161,7 @@ article#hero {
     background-size: cover;
 }
 
-article#hero > h1 {
+article#hero > h2 {
     height: 100%;
     width: 100%;
     padding-top: 10%;
@@ -276,7 +278,7 @@ aside#page-navigation button:last-of-type {
 }
 
 aside#page-navigation button span {
-    background-color: var(--acrylic-gray-1);
+    background-color: var(--acrylic-dark-1);
     border: 2px solid var(--border-color);
     border-radius: 50%;
     box-shadow: 0 0 10px var(--shadow-light-only);
@@ -294,7 +296,7 @@ aside#page-navigation button span {
 }
 
 aside#page-navigation button:hover span {
-    background-color: var(--acrylic-gray-2);
+    background-color: var(--acrylic-dark-2);
     border-radius: 35%;
     box-shadow: 0 0 10px var(--shadow-medium);
 }

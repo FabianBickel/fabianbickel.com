@@ -42,9 +42,9 @@
 
         /* Acrylic */
         --acrylic-background: rgba(255, 255, 255, 0.9);
-        --acrylic-gray-1: rgba(255, 255, 255, 0.2);
-        --acrylic-gray-2: rgba(255, 255, 255, 0.4);
-        --acrylic-gray-3: rgba(255, 255, 255, 0.6);
+        --acrylic-dark-1: rgba(255, 255, 255, 0.2);
+        --acrylic-dark-2: rgba(255, 255, 255, 0.4);
+        --acrylic-dark-3: rgba(255, 255, 255, 0.6);
     }
 }
 
@@ -68,8 +68,8 @@
 
         /* Acrylic */
         --acrylic-background: rgba(47, 47, 47, 0.6);
-        --acrylic-gray-1: rgba(0, 0, 0, 0.2);
-        --acrylic-gray-2: rgba(0, 0, 0, 0.4);
-        --acrylic-gray-3: rgba(0, 0, 0, 0.6);
+        --acrylic-dark-1: rgba(0, 0, 0, 0.2);
+        --acrylic-dark-2: rgba(0, 0, 0, 0.4);
+        --acrylic-dark-3: rgba(0, 0, 0, 0.6);
     }
 }
