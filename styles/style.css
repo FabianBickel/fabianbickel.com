@@ -143,14 +143,6 @@ div#content article {
     text-align: center;
 }
 
-div#content article > h1 {
-
-}
-
-div#content article > p {
-
-}
-
 article#hero {
     display: flex;
     align-items: center;
@@ -176,18 +168,6 @@ article#hero > h2 {
 article#article1 {
     background-image: url(../images/backgrounds/blob-pink-dark.svg);
     padding: 0 100px;
-}
-
-article#article2 {
-
-}
-
-article#article3 {
-    
-}
-
-article#article4 {
-    
 }
 
 article.blob {
@@ -216,14 +196,6 @@ article.blob {
 
 #spacer2 {
     background-image: url(../images/transitions/light-to-dark-blue.svg)
-}
-
-#spacer3 {
-
-}
-
-#spacer4 {
-
 }
 
 footer {
